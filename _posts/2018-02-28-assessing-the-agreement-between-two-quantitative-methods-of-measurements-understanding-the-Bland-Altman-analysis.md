@@ -13,13 +13,13 @@ tags:
   - standard
 ---
 
-While attempting to assess the agreement between two quantitative methods of measurements, one need a validation tool to statistically evaluate the agreement between the two sets of measurements. This can be useful to determine if a method can be used interoperably with another without the need of a correction model.
+Attempting to statistically assess the agreement between two quantitative methods of measurements requires validation tool. 
 
 A widely adopted tool is the correlation study computed with one method as predictor and the other as response variable (e.g. see [this](http://onlinelibrary.wiley.com/doi/10.1002/wea.2158/pdf) publication that compares temperature measurements obtained by two different kind of weather stations at the exact same location).  
 
 However, as described by [Giavarina (2015)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4470095/), correlation study should not be used to asses the comparatibility or agreement between two instruments (because it studies the relation between one variable and the other and not the __differences__).
 
-In 1986, [Bland and Altman](https://www-users.york.ac.uk/~mb55/meas/ba.pdf) have proposed an analysis that quantifies the agreement between two quantitative sets of measurements of the same parameter by statistically studying the behaviors of the differences between paired measurements . 
+In 1986, [Bland and Altman](https://www-users.york.ac.uk/~mb55/meas/ba.pdf) have proposed an analysis that quantifies the agreement between two quantitative sets of measurements of the same parameter by statistically studying the behaviors of the differences between paired measurements. This analysis is useful to determine if a method can be used interoperably with another without the need of a correction model
 
 ## Some words about measurements difference
 
