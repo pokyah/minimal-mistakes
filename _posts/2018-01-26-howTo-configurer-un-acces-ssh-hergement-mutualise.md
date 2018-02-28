@@ -1,7 +1,7 @@
 ---
 title: "Configurer un accès SSH à un hébergement mutualisé"
 classes: "wide"
-toc: true
+toc: false
 toc_label: "Table des matières"
 toc_icon: "cog"
 categories:
