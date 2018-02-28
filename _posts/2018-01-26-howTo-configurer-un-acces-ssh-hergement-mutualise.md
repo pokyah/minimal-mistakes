@@ -4,7 +4,6 @@ header:
   overlay_image: /assets/images/ssh_access.jpg
   og_image: /assets/images/ssh_access.jpg
   caption: "Photo credit: [**pixabay**](https://pixabay.com)"
-  cta_url: "https://pixabay.com"
 classes: "wide"
 toc: false
 toc_label: "Table des matières"
