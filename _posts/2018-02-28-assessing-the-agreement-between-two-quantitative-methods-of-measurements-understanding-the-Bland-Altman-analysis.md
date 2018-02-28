@@ -13,7 +13,7 @@ tags:
   - standard
 ---
 
-Attempting to statistically assess the agreement between two quantitative methods of measurements requires validation tool. 
+Attempting to statistically assess the agreement between two quantitative methods of measurements requires a validation tool. 
 
 A widely adopted tool is the correlation study computed with one method as predictor and the other as response variable (e.g. see [this](http://onlinelibrary.wiley.com/doi/10.1002/wea.2158/pdf) publication that compares temperature measurements obtained by two different kind of weather stations at the exact same location).  
 
