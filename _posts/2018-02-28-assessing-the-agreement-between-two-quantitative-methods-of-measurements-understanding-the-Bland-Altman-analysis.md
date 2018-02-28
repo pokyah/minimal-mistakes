@@ -32,9 +32,9 @@ From [Giavarina (2015)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4470095/) :
 Their graphical method plots the __differences between the two paired measurements__ against __the averages of these measurements__.
 
 Here is an examplative Bland-Altman plot : 
-![blandAltman plot example]({{ "/assets/blandAltman.png" | absolute_url }})
+![blandAltman plot example]({{ "/assets/images/blandAltman.png" | absolute_url }})
 
-*[Source](https://cran.r-project.org/web/packages/BlandAltmanLeh/vignettes/Intro.html*
+*[Source](https://cran.r-project.org/web/packages/BlandAltmanLeh/vignettes/Intro.html)*
 
 Horizontal lines are drawn at the __mean difference__ (thick red line), and at the upper and lower __limits of agreement__ (thick blue lines) together with their 0.95 [confidence interval - CI](https://www.mathsisfun.com/data/confidence-interval.html) (thin lines). 
 
