@@ -1,5 +1,6 @@
 ---
 title: "Assessing the agreement between two quantitative methods of measurements : understanding the Bland Altman analysis"
+classes: "wide"
 toc: true
 toc_label: "Table des matières"
 toc_icon: "cog"
