@@ -153,7 +153,7 @@ You can share this very specific R environment with your co-workers. First, shar
 
 ## Conclusion
 
-You have learned how to use Docker to run your own customized R isolated environment inside a Docker container and how to share this specific environment with your colleagues.
+You have learned how to use Docker to run your own customized R isolated environment inside a container and how to share this specific environment with your colleagues.
 
 In a next tutorial, I'll explain you how to run a container able to connect to an external postgreSQL database.  
 
