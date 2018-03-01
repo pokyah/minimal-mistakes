@@ -13,7 +13,7 @@ title                    : "pokyah"
 title_separator          : "-"
 name                     : "Personal blog of Thomas Goossens"
 description              : "open Geomatics."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://pokyah.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "pokyah/pokyah.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -92,7 +92,7 @@ analytics:
 author:
   name             : "Thomas Goossens"
   avatar           : "/assets/images/profil.jpg"
-  bio              : "Geographer / Data-Analyst"
+  bio              : "Geostatistician at <a href="https://cra.wallonie.be">CRA-W</a><br>Currently working on the <a href="http://www.cra.wallonie.be/en/cra-w-is-equipping-wallonia-with-16000-virtual-weather-stations">Agromet Project</a> "
   location         : "Brussels"
   email            :
   uri              :
