@@ -155,20 +155,16 @@ In a next tutorial, I'll explain you how to run a container able to connect to a
 
 ## Future readings 
 
-### R with Docker 
-
 * [Andrew Heiss tuto](https://www.andrewheiss.com/blog/2017/04/27/super-basic-practical-guide-to-docker-and-rstudio/)
 * [Dirk Eddelbuettel presentation](http://dirk.eddelbuettel.com/papers/useR2015_docker.pdf)
 * [Brian J. Knaus CLI tuto](https://knausb.github.io/2017/06/running-r-in-docker/)
-* https://do* http://o2r.info/2017/05/30/containerit-package/cs.docker.com/samples/library/r-base/#interactive-r
-* https://www.r-bloggers.com/r-3-3-0-is-another-motivation-for-docker/
-* https://cran.r-project.org/web/packages/googleComputeEngineR/vignettes/docker.html
+* [R-Blogger post](https://www.r-bloggers.com/r-3-3-0-is-another-motivation-for-docker/)
 
 ### Dockfile customization
 
-* http://o2r.info/2017/05/30/containerit-package/
-* http://ropenscilabs.github.io/r-docker-tutorial/05-dockerfiles.html
-* https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/
-* https://stackoverflow.com/questions/45289764/install-r-packages-using-docker-file
-* https://stackoverflow.com/questions/46902203/verify-r-packages-installed-into-docker-container
-* https://stackoverflow.com/questions/26500174/upload-local-files-to-docker-container?noredirect=1&lq=1
+* [R package to create dockfiles]( http://o2r.info/2017/05/30/containerit-package/)
+* [tutorial from ropenscilabs](http://ropenscilabs.github.io/r-docker-tutorial/05-dockerfiles.html)
+* [mirantis blog tutorial]https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/
+* [stackoverflow install-r-packages-using-docker-file](https://stackoverflow.com/questions/45289764/install-r-packages-using-docker-file)
+* [stackoverflow verify-r-packages-installed-into-docker-container](https://stackoverflow.com/questions/46902203/verify-r-packages-installed-into-docker-container)
+* [stackoverflow upload-local-files-to-docker-container](https://stackoverflow.com/questions/26500174/upload-local-files-to-docker-container?noredirect=1&lq=1)
