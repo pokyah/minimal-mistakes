@@ -92,9 +92,9 @@ analytics:
 author:
   name             : "Thomas Goossens"
   avatar           : "/assets/images/profil.jpg"
-  bio              : "Geostatistician at <a href="https://cra.wallonie.be">CRA-W</a><br>Currently working on the <a href="http://www.cra.wallonie.be/en/cra-w-is-equipping-wallonia-with-16000-virtual-weather-stations">Agromet Project</a> "
+  bio              : "Geostatistician at CRA-W working on the Agromet Project"
   location         : "Brussels"
-  email            :
+  email            : "hello.pokyah@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -103,16 +103,16 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "https://github.com/pokyah/"
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "thomasgoosens1985" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
+  stackoverflow    : "5449559/pokyah"# "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
   twitter          :
