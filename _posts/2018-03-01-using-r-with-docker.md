@@ -119,7 +119,7 @@ And to delete all images (really ?!) :
 $ docker rmi $(docker images -qf "dangling=true")
 ```
 
-## Using R studio inside a Docker container and saving your work
+## Using RStudio inside a Docker container and saving your work
 
 Let's dive in the latest part of this tutorial : running R inside a container. It's actually pretty simple. It involves 2 steps : 
 
@@ -140,11 +140,11 @@ $ docker run -w /home/rstudio/ rm -p 8787:8787 -v /yourUsername/Rprojects/yourPr
 ```
 Docker will instantiate a new container from the rocker/tidyverse image and make your project folder available to the container by mounting it. All the modifications that you made to your mounted host folder from your container will be effective in your host machine. So once you stop your container, don't worry, your modifications will be saved ! 
 
-To launch your container RStudio install, open a web-browser and navigate to `http://localhost:8787`. You habitual RStudio interface will be launched within a few seconds and your mounted folder will appear in the files pane. __Congratulations, you are now readay to work within a dockerised RStudio install !__
+To launch your container RStudio install, open a web-browser and navigate to `http://localhost:8787`. You habitual RStudio interface will be launched within a few seconds and your mounted folder will appear in the files pane. __Congratulations, you are now ready to work within a dockerised RStudio install !__
 
 In most of the cases, before running an image, you will need to customise it so that it reflects your own needs. __Customising an image__ requires to __edit its dockfile__ and rebuild the image as mentioned earlier. 
 
-To keep __git versioned dockfiles__ of your images, you can push them to [Github](https://github.com/). Hosting your dockfile on Github offers you a nice feature : [automated builds](https://docs.docker.com/docker-hub/builds/)). Once enabled, each time you push a modification of your dockfile to Github, Docker will rebuild your image and make it ready to be pulled by others.
+To keep __git versioned dockfiles__ of your images, you can push them to [Github](https://github.com/). Hosting your dockfile on Github offers you a nice feature : [automated builds](https://docs.docker.com/docker-hub/builds/). Once enabled, each time you push a modification of your dockfile to Github, Docker will rebuild your image and make it ready to be pulled by others.
 
 You can share this very specific R environment with your co-workers. First, share them this tutorial and then share your image. For this purpose, you have two solutions :
 
