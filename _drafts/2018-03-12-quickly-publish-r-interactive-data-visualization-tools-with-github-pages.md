@@ -1,5 +1,5 @@
 ---
-title: "Using R with Docker"
+title: "Quickly publish your R interactive data visualisation tools with github pages"
 header:
   overlay_image: /assets/images/r_docker.jpg
   og_image: /assets/images/r_docker.jpg
@@ -12,11 +12,20 @@ categories:
   - howTo
 tags:
   - R
-  - Docker
+  - git
+  - github
+  - dataviz
+  - web
   - tools
   - english
   - standard
 ---
+
+## Online publishing for seamless communication 
+
+## What is github pages ? 
+
+
 
 Why should you do that ? There are two main reasons to use R in conjunction with Docker. First, it allows you to quickly and easily share your work wathever the OS and R configuration of your collaborators. Hassle free collaboration ! Second, it allows you to work in an isolated environment. This means that you will never pollute your OS and e.g. run in time-consuming re-installation procedures due to broken configuration. In case of OS crash, simply relaunch your *Docker R container* with a single command (more about containers below) and you are ready to work ! 
 
