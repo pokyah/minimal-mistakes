@@ -21,21 +21,26 @@ tags:
   - standard
 ---
 
-As a data scientist, you certainly produce a lot of tables, plots and maps to let your data "speak for itself". This is your core business and I'm sure you do it pretty well ! But when it comes to make this data available to your target audience things can quickly get more frustrating. **Say more - You often struggle with exporting options, formats, **
+As a data scientist, you certainly produce a bunch of tables, plots, maps and many other outputs to let your data "speak for itself". This is your core business and I'm sure you do it pretty well ! But when it comes to make this data available to your target audience things can quickly get more frustrating. **Say more - You often struggle with exporting options, formats, **
 
-Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive datavisualation apps. These last years, the R community has developed ::countless:: libraries (leaflet, shiny, plotly, etc) that take advantages from these advances in order to allow you to easily transform your analysis outputs in intelligible and eye catching webapps. We will see how to combine these R libraries capabilities with github pages in order to quickly make your top notch data analysis available to your audience (and don't be modest : to the world)
+Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive datavisualation apps and presentations. These last years, the R community has developed ::countless:: libraries (leaflet, shiny, plotly, knitr, etc) that take advantages from these advances in order to allow you to easily transform your analysis outputs in intelligible and eye catching webapps. We will see how to combine these R libraries capabilities with github pages in order to quickly make your top notch data visulation app available to your audience (and don't be modest : to the world)
 
-Before we dig into the topic, it is important to understand what a webpage actually is ! So here is a short recap of what a webpage is.
+Before we dig into the topic, it is important to understand what a webpage actually is ! So here is a short recap ! 
 
 ## How does a webpage works (in simple terms) ?
 
-When you enter an address (URL) in your web-browser, your web-browser send a request to the hosting server. In returns, the server sends to your web-browser the requested content in the form of an HTML file. HTML is a kind of formatted text (headings, bold, tables, etc) that can contains links to other documents. Your web-browser translate this non-human readable HTML to its human friendly version. ::give example::
-This HTML can be "upgraded" by 2 other ::languages:: also supported by your web-broser : CSS and Javascript. While CSS is responsible for the styling (font color, background color, font-size, etc), the Javascript manages the actions that can be performed by/on the web-page (like actions triggered by clicking on a button. e.g. calling a server to get data) ::give code example::. And that's it ! With these 3 ingredients, you can build a webpage. Static vs dynamic ! 
+When you enter an address (URL) in your web-browser, your web-browser send a request to the hosting server. In returns, the server sends to your web-browser the requested content in the form of an HTML file. HTML is a kind of formatted text contained between specific tags (headings, bold, tables, etc) and that can eventually link to other documents. Your web-browser translate this non-human readable HTML to its human friendly version. ::give example::
+This HTML can be "upgraded" by 2 other ::languages:: also supported by your web-broser : CSS and Javascript. While CSS is responsible for the styling (font color, background color, font-size, etc), the Javascript manages the interactivity (like zooming on a map) and the actions that can be performed by/on the web-page (like actions triggered by clicking on a button. e.g. calling a server to get data) ::give code example::. And that's it ! With these 3 ingredients, you can build a webpage.
+An important thing to get in mind is the difference between a [static](https://en.wikipedia.org/wiki/Static_web_page) and a dynamic web-page ! 
 
 So, when it comes to static content, with no need for a server to load additionnal information on the fly, you can host your webpages 
 
-## what is github pages 
-*  
+## What is Github pages 
+
+For those who are familiar with the version control software git (if you don't know what [git](https://git-scm.com/) is, you really **must** get to [know it](http://r-bio.github.io/intro-git-rstudio/) to impressively speed up your (R) code development work), you most probably already knows [Github](https://github.com/) as a git repository hosting service. Github offers many other possibilities : collaborative code developement, issues tracking and discussions, project presentation page, wiki and various integrations with other web services thanks to their API. Among these features, exists [Github pages](https://pages.github.com/) which is intended to allow you to publish **static** pages without the need to run our rent your own webserver. **So, as long as your dataviz product does not require any running backend (be it in node.js, Python, R, Java, Ruby, etc), you can host it on Github pages !** This means that [R Shiny apps](https://shiny.rstudio.com/) can not be hosted on github pages. But yeah, you can still publish [leaflet](https://rstudio.github.io/leaflet/) maps, [plotly](https://plot.ly/r/) graphs and [knitr](https://yihui.name/knitr/demo/minimal/) html reports ! That already opens up a wide variety of possibilities ! 
+
+## Example 
+
 to facilitate   users can benefit of nice libraries to  
 
 
