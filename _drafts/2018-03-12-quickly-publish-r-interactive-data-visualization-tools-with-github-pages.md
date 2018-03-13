@@ -1,5 +1,5 @@
 ---
-title: "Quickly publish your R interactive data visualisation tools with github pages"
+title: "Quickly publish your R interactive data visualisation tools with github pages (Leaflet example)"
 header:
   overlay_image: /assets/images/r_docker.jpg
   og_image: /assets/images/r_docker.jpg
@@ -19,6 +19,7 @@ tags:
   - tools
   - english
   - standard
+  - gis 
 ---
 
 As a data scientist, you certainly produce a bunch of tables, plots, maps and many other outputs to let your data "speak for itself". This is your core business and I'm sure you do it pretty well ! But when it comes to make this data available to your target audience things can quickly get more frustrating. **Say more - You often struggle with exporting options, formats, **
@@ -39,9 +40,13 @@ So, when it comes to static content, with no need for a server to load additionn
 
 For those who are familiar with the version control software git (if you don't know what [git](https://git-scm.com/) is, you really **must** get to [know it](http://r-bio.github.io/intro-git-rstudio/) to impressively speed up your (R) code development work), you most probably already knows [Github](https://github.com/) as a git repository hosting service. Github offers many other possibilities : collaborative code developement, issues tracking and discussions, project presentation page, wiki, [Jekyll blog](https://jekyllrb.com/) and various integrations with other web services thanks to their API. Among these features, exists [Github pages](https://pages.github.com/) which is intended to allow you to publish **static** pages without the need to run our rent your own webserver. **So, as long as your dataviz product does not require any running backend (be it in node.js, Python, R, Java, Ruby, etc), you can host it on Github pages !** This means that [R Shiny apps](https://shiny.rstudio.com/) can not be hosted on github pages. But yeah, you can still publish [leaflet](https://rstudio.github.io/leaflet/) maps, [plotly](https://plot.ly/r/) graphs and [knitr](https://yihui.name/knitr/demo/minimal/) html reports ! That already opens up a wide variety of possibilities ! 
 
+In simple terms :  
+
+__Github pages turns your repository containing your source file hosted at `https://github.com/yourUserName/repositoryName` to a rendered web-page hosted at `https://yourUserName.github.com/repositoryName`__  
+
 ## How to publish your R outputs to Github pages ? 
 
-The workflow is as follows : 
+The workflow is as follows (more details with an example here below) : 
 
 1. Exports your R analysis outputs to a specific folder
 2. Make this folder a git repository
@@ -49,6 +54,65 @@ The workflow is as follows :
 3. Commit your changes
 4. Push to Github
 5. Visit your published work at `https://yourGithubUsername.github.io/repositoryname`
+
+For the sake of :::: we will describe these 5 steps with a ::effective:: example.   
+
+### First things first : create an online repository at Github
+
+Once you have created a Github account, go to `https://github.com/yourUserName`, click on the "*+*" button and select "*new repository*". Give it the name "mywebapps" (or whatever you want) :  
+
+![new_repository]({{ "/assets/images/new_repository.png" | absolute_url }})  
+
+Eventually add a description and choose an existing .gitignore file and license and click on "*create repository*". You are now on your Github mywebapps repository page. Click on the green button "*Clone or download*", then on the link "*use HTTPS*" (you can of course also use [SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) if you know what it means) and copy the link provided in the text box :  
+
+![clone_repo]({{ "/assets/images/clone_repo.png" | absolute_url }}) 
+
+### Sync (i.e. clone) this repository to your computer and create the gh-pages branch for auto-publishing
+
+Let's create a folder called `dev` under your home directory into which we will clone the online repository by pasting its addresse as a parameter of the git clone command in your terminal ([more about the use of git with the command line](http://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html)) :
+
+```bash
+$ mdkir ~/dev
+$ cd ~/dev
+$ git clone https://github.com/yourUserName/mywebapps.git
+```
+Enter your Github username and password, press enter and your `dev` folder now contains a `mywebapps` folder which is a git repository (i.e. the root of the `mywebapps` folder contains a hidden `.git` folder that manages all its git features). Let's check this : 
+
+```bash
+$ ls -al
+```
+If everything went OK, you should see the mywebapps and the .git folder listed in your terminal. Now, let's create a specific branch (more about branches [here](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)) for automatic hosting and publishing of your webapps code ! Github uses `gh-pages` as the default branch name to create and hosted web-page version of your repository. So let's create it and use it !  
+
+```bash
+$ git checkout -b gh-pages
+```
+
+### Code your interactive leaflet map with R !  
+
+Your are now ready to build some git versioned code and make it ready to be published on the web through the magic of git and Github pages ! 
+
+As example, we will use R to build an interactive leaflet map that displays two layers : A DEM of Belgium and a [WMS](https://en.wikipedia.org/wiki/Web_Map_Service) layer of currently observed precipitations provided by the rain radar of the KNMI. [Download](::::) the source of the `demo-map.R` script and save it under your `mywebapps` folder. Open your terminal inside this folder and execute the `demo-map.R` script :  
+
+```bash
+$ Rscript demo-map.R
+```
+
+The script should have produce an `demo-map.html` file containing the interactive map plus a `demo-map_files` folder containing all the required javascript libraries required to activate it. It has also saved a 3 files resulting from the download of the raster elevation data. 
+
+If you get errors it might be because you don't have the required libraries installed. To avoid such problems, simply install the missing libraries or if you are not afraid, you can have a look at my [R + Docker tutorial](::::) ! 
+
+Your interactive web map is now built ! You can locally open it with your browser by right-clicking on the `demo-map.html` and choose to open it with your favorite browser. Check the various buttons to be sure that everything works as expected. What is important to know is that this impressive web app does not need any backend to run. Once the page is loaded, everything works inside your browser thanks to HTML, CSS and Javascript ! *Ok, but how is it then possible for me navigate and zoom in every part of the world without having to run a server to serve the base layer tiles* you will tell ? The trick is that leaflet render tiles stored on a third party tiles provider. It is actually a simple line of Javascript that does the magic of calling the tiles and serving these to your browser. If you turn your wifi off, you will see that you won't be able anymore to see the base layer while navigating the world. 
+
+### Publish it online using gh-pages !
+
+Head back to your terminal (opened in your `webapps` folder) and save and publish your work to Github : 
+
+```bash
+$ git add .
+$ git commit -m "adding interactive demo-map.html"
+$ git push --set-upstream origin gh-pages
+```
+
 
 to facilitate   users can benefit of nice libraries to  
 
