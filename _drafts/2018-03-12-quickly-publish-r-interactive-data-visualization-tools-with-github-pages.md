@@ -33,13 +33,22 @@ When you enter an address (URL) in your web-browser, your web-browser send a req
 This HTML can be "upgraded" by 2 other ::languages:: also supported by your web-broser : CSS and Javascript. While CSS is responsible for the styling (font color, background color, font-size, etc), the Javascript manages the interactivity (like zooming on a map) and the actions that can be performed by/on the web-page (like actions triggered by clicking on a button. e.g. calling a server to get data) ::give code example::. And that's it ! With these 3 ingredients, you can build a webpage.
 An important thing to get in mind is the difference between a [static](https://en.wikipedia.org/wiki/Static_web_page) and a dynamic web-page ! 
 
-So, when it comes to static content, with no need for a server to load additionnal information on the fly, you can host your webpages 
+So, when it comes to static content, with no need for a server to load additionnal information on the fly, you can host your webpages. 
 
 ## What is Github pages 
 
-For those who are familiar with the version control software git (if you don't know what [git](https://git-scm.com/) is, you really **must** get to [know it](http://r-bio.github.io/intro-git-rstudio/) to impressively speed up your (R) code development work), you most probably already knows [Github](https://github.com/) as a git repository hosting service. Github offers many other possibilities : collaborative code developement, issues tracking and discussions, project presentation page, wiki and various integrations with other web services thanks to their API. Among these features, exists [Github pages](https://pages.github.com/) which is intended to allow you to publish **static** pages without the need to run our rent your own webserver. **So, as long as your dataviz product does not require any running backend (be it in node.js, Python, R, Java, Ruby, etc), you can host it on Github pages !** This means that [R Shiny apps](https://shiny.rstudio.com/) can not be hosted on github pages. But yeah, you can still publish [leaflet](https://rstudio.github.io/leaflet/) maps, [plotly](https://plot.ly/r/) graphs and [knitr](https://yihui.name/knitr/demo/minimal/) html reports ! That already opens up a wide variety of possibilities ! 
+For those who are familiar with the version control software git (if you don't know what [git](https://git-scm.com/) is, you really **must** get to [know it](http://r-bio.github.io/intro-git-rstudio/) to impressively speed up your (R) code development work), you most probably already knows [Github](https://github.com/) as a git repository hosting service. Github offers many other possibilities : collaborative code developement, issues tracking and discussions, project presentation page, wiki, [Jekyll blog](https://jekyllrb.com/) and various integrations with other web services thanks to their API. Among these features, exists [Github pages](https://pages.github.com/) which is intended to allow you to publish **static** pages without the need to run our rent your own webserver. **So, as long as your dataviz product does not require any running backend (be it in node.js, Python, R, Java, Ruby, etc), you can host it on Github pages !** This means that [R Shiny apps](https://shiny.rstudio.com/) can not be hosted on github pages. But yeah, you can still publish [leaflet](https://rstudio.github.io/leaflet/) maps, [plotly](https://plot.ly/r/) graphs and [knitr](https://yihui.name/knitr/demo/minimal/) html reports ! That already opens up a wide variety of possibilities ! 
 
-## Example 
+## How to publish your R outputs to Github pages ? 
+
+The workflow is as follows : 
+
+1. Exports your R analysis outputs to a specific folder
+2. Make this folder a git repository
+3. Create a `gh-page` branch 
+3. Commit your changes
+4. Push to Github
+5. Visit your published work at `https://yourGithubUsername.github.io/repositoryname`
 
 to facilitate   users can benefit of nice libraries to  
 
