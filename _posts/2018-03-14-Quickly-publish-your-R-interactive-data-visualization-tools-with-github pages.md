@@ -1,11 +1,11 @@
 ---
 title: "Quickly publish your R interactive data visualization tools with github pages"
 header:
-  overlay-image: /assets/images/r-gh-pages.jpg
+  image: /assets/images/r-gh-pages.jpg
   og_image: /assets/images/r-gh-pages.jpg
   caption: "Photo credit: [**pixabay**](https://pixabay.com)"
 classes: "wide"
-comments : true
+comments: true
 toc: false
 toc_label: "Table des matières"
 toc_icon: "cog"
@@ -13,15 +13,15 @@ categories:
   - howTo
 tags:
   - R
-  - git
-  - github
+  - Github
   - dataviz
   - web
+  - GIS
   - tools
   - english
   - standard
-  - gis
 ---
+
 
 As a data scientist, you certainly produce a bunch of tables, plots, maps and many other kind outputs to let your data "speak for itself". This is your core business and I'm sure you do it pretty well ! But when it comes to make this data available to your target audience things can quickly get more frustrating. How to share these outputs in a format that everyone can open ? How to easily send these to 100 persons ? How to notify them of any updated output ? How to make these outputs more interactive so that your audience can get a full insight of your data analysis ? R and web technologies can help you to solve these problems you probably have already encountered.  
 
