@@ -25,7 +25,7 @@ tags:
 
 As a data scientist, you certainly produce a bunch of tables, plots, maps and many other kind outputs to let your data "speak for itself". This is your core business and I'm sure you do it pretty well ! But when it comes to make this data available to your target audience things can quickly get more frustrating. How to share these outputs in a format that everyone can open ? How to easily send these to 100 persons ? How to notify them of any updated output ? How to make these outputs more interactive so that your audience can get a full insight of your data analysis ? R and web technologies can help you to solve these problems you probably have already encountered.  
 
-Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive data visualization apps and presentations. These last years, the R community has developed countless libraries (leaflet, shiny, plotly, knitr, etc) that take advantages from these advances in order to allow you to easily transform your analysis outputs in eye catching web app that make your data intelligible.  in this post we will see how to combine these R libraries capabilities with [Github pages](https://pages.github.com/) in order to quickly make your top notch data visualization output available to your audience (and don't be modest : to the world)
+Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive data visualization apps and presentations. These last years, the R community has developed countless libraries (leaflet, shiny, plotly, knitr, etc) that take advantages from these advances in order to allow you to easily transform your analysis outputs in eye catching web apps that make your data intelligible.  in this post we will see how to combine these R libraries capabilities with [Github pages](https://pages.github.com/) in order to quickly make your top notch data visualization output available to your audience (and don't be modest : to the world)
 
 Before we dig into the topic, it is important to first understand what a webpage actually is. So here is a short recap !
 
@@ -66,7 +66,7 @@ To illustrate this process, we will use R to build an interactive leaflet map th
 
 Once you have created a Github account, go to `https://github.com/yourUserName`, click on the *+* button and select *new repository*. Give it the name `myoutputs` (or whatever you want) :  
 
-![new_repository]({{ "/assets/images/new_repository.png" | absolute_url }})  
+![new_repository]({{ "/assets/images/new_repository.png" | absolute_url }})
 
 Eventually add a description and choose an existing .gitignore file and license and click on *create repository*. You are now on your Github *myoutputs* repository page. Click on the green button *Clone or download*, then on the link *use HTTPS* (you can of course also use [SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) if you know what it means) and copy the link provided in the text box :  
 
@@ -86,7 +86,7 @@ Enter your Github username and password (if you have choosen HTTPS instead of SS
 ```bash
 $ ls -al
 ```
-If everything went OK, you should see the myoutputs and the .git folder listed in your terminal. Now, let's create a specific branch (more about branches [here](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)) for automatic hosting and publishing of your myoutputs code ! Github uses `gh-pages` as the default branch name to create an hosted webpage version of your repository source code. So let's create it and use it !  
+If everything went OK, you should see the `myoutputs` and the `.git` folder listed in your terminal. Now, let's create a specific branch (more about branches [here](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)) for automatic hosting and publishing of your outputs! Github uses `gh-pages` as the default branch name to create an hosted webpage version of your repository source code. So let's create it and use it !  
 
 ```bash
 $ git checkout -b gh-pages
@@ -102,11 +102,21 @@ Your are now ready to build some git versioned code and make it ready to be publ
 $ Rscript demo-map.R
 ```
 
-The script has produced a `demo-map.html` file containing the interactive map plus a `demo-map_files` folder containing all the required javascript libraries required to make it interactive. It has also saved 3 files resulting from the download of the raster elevation data.
+The script has produced a `demo-map.html` file containing the interactive map plus a `demo-map_files` folder containing all the required javascript libraries required to make it interactive. It has also saved 3 files resulting from the download of the raster elevation data. The resulting map looks like this : 
 
-If you get errors it might be because you don't have the required libraries installed. To avoid such problems, simply install the missing libraries ( and if you are adventurous enough, you can have a look at my [R + Docker tutorial]{{ site.baseurl }}{% post_url 2018-03-01-using-r-with-docker %}!)
+{% raw %}
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=400px src="http://music.163.com/outchain/player?type=2&id=29750802&auto=0&height=32"></iframe>
+{% endraw %}
 
-Your interactive web map is now built ! You can locally open it by right-clicking on the `demo-map.html` file and choose to open it with your favorite web-browser. Check the various buttons to be sure that everything works as expected. What is important to know is that this impressive web app does not need any backend to run. Once the page is loaded, everything works inside your web-browser thanks to HTML, CSS and Javascript ! *Ok, but how is it then possible for me navigate and zoom in every part of the world without having to run a server to get the base layer tiles* you will tell ? The trick is that leaflet render tiles stored on a third party tiles provider (i.e. a web-server). It is actually a simple line of Javascript that does the magic of calling the tiles and serving these to your web-browser. If you turn your wifi off, you will see that you won't be able anymore to see the base layer while navigating the world.
+
+
+If you get errors it might be because you don't have the required libraries installed. To avoid such problems, simply install the missing libraries (and if you are adventurous enough, you can have a look at my [R + Docker tutorial]{{ site.baseurl }}{% post_url _posts/2018-03-01-using-r-with-docker %}!)
+
+Your interactive web map is now built ! You can locally open it by right-clicking on the `demo-map.html` file and choose to open it with your favorite web-browser. Check the various buttons to be sure that everything works as expected. What is important to know is that this impressive web app does not need any backend to run. Once the page is loaded, everything works inside your web-browser thanks to HTML, CSS and Javascript ! 
+
+> Ok, but how is it then possible for me navigate and zoom in every part of the world without having to run a server to get the base layer tiles ?
+
+That's probably what you will tell ! The trick is that leaflet render tiles stored on a third party tiles provider (i.e. a web-server). It is actually a simple line of Javascript that does the magic of calling the tiles and serving these to your web-browser. If you turn your wifi off, you will see that you won't be able anymore to see the base layer while navigating the world.
 
 ### Publish it online using gh-pages !
 
