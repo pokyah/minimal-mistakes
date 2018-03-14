@@ -1,5 +1,8 @@
 ---
 title: "Quickly publish your R interactive data visualization tools with github pages"
+header:
+  og_image: /assets/images/r-gh-pages.jpg
+  caption: "Photo credit: [**pixabay**](https://pixabay.com)"
 classes: "wide"
 comments: true
 toc: false
@@ -17,9 +20,15 @@ tags:
   - standard
 ---
 
-As a data scientist, you certainly produce a bunch of tables, plots, maps and many other kind outputs to let your data "speak for itself". This is your core business and I'm sure you do it pretty well ! But when it comes to make this data available to your target audience things can quickly get more frustrating. How to share these outputs in a format that everyone can open ? How to easily send these to 100 persons ? How to notify them of any updated output ? How to make these outputs more interactive so that your audience can get a full insight of your data analysis ? R and web technologies can help you to solve these problems you probably have already encountered.  
+As a data scientist, you certainly produce a bunch of tables, plots, maps and many other kind of outputs to let your data "speak for itself".  
 
-Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive data visualization apps and presentations. These last years, the R community has developed countless libraries (leaflet, shiny, plotly, knitr, etc) that take advantages from these advances in order to allow you to easily transform your analysis outputs in eye catching web apps that make your data intelligible.  in this post we will see how to combine these R libraries capabilities with [Github pages](https://pages.github.com/) in order to quickly make your top notch data visualization output available to your audience (and don't be modest : to the world)
+This is your core business and I'm sure you do it pretty well ! But when it comes to make this data available to your target audience things can quickly get more frustrating. How to share these outputs in a format that everyone can open ? How to easily send these to 100 persons ? How to notify them of any updated output ? How to make these outputs more interactive so that your audience can get a full insight of your data analysis ?  
+
+R and web technologies can help you to solve these problems you probably have already encountered.  
+
+Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive data visualization apps and presentations. These last years, the R community has developed countless libraries (leaflet, shiny, plotly, knitr, etc) that take advantages from these advances in order to allow you to easily transform your analysis outputs in eye catching web apps that make your data intelligible.  
+
+In this post we will see how to combine these R libraries capabilities with [Github pages](https://pages.github.com/) in order to quickly make your top notch data visualization output available to your audience (and don't be modest : to the world)
 
 Before we dig into the topic, it is important to first understand what a webpage actually is. So here is a short recap !
 
