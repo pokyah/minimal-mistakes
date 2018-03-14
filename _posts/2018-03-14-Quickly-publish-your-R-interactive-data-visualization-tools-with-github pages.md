@@ -90,7 +90,7 @@ $ git checkout -b gh-pages
 
 Your are now ready to build some git versioned code and make it ready to be published on the web through the magic of git and Github pages !
 
-[Download]({{ "/assets/source_code/demo-map.R" | absolute_url }})  the source of the `demo-map.R` (which is intended to produce an HTML leaflet map) script and save it under your `myoutputs`. Open your terminal inside this folder and execute it :  
+[Download](https://pokyah.github.io/pokyah-maps/bel-dem-knmi/demo-map.R)  the source of the `demo-map.R` (which is intended to produce an HTML leaflet map) script and save it under your `myoutputs`. Open your terminal inside this folder and execute it :  
 
 ```bash
 $ Rscript demo-map.R
@@ -98,7 +98,7 @@ $ Rscript demo-map.R
 
 The script has produced a `demo-map.html` file containing the interactive map plus a `demo-map_files` folder containing all the required javascript libraries required to make it interactive. It has also saved 3 files resulting from the download of the raster elevation data. The resulting map looks like this : 
 
-<iframe src="https://pokyah.github.io/sheetsee-pocket/" width="90%" height="400"></iframe>
+<iframe src="https://pokyah.github.io/pokyah-maps/bel-dem-knmi/" width="100%" height="400"></iframe>
 
 If you get errors it might be because you don't have the required libraries installed. To avoid such problems, simply install the missing libraries (and if you are adventurous enough, you can have a look at my [R + Docker tutorial](it {{ site.baseurl }}{% post_url 2018-03-01-using-r-with-docker %})!)
 
