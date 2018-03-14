@@ -34,7 +34,7 @@ As Github pages only works with static content, an important thing to get in min
 
 ## What is Github pages
 
-For those who are familiar with the version control software git you most probably already knows [Github](https://github.com/) as a git repository hosting service (if you don't know what [git](https://git-scm.com/) is, you really **must** get to [know it](http://r-bio.github.io/intro-git-rstudio/) to impressively speed up your (R) code development). Github offers many other possibilities : collaborative code developement, issues tracking and discussions, project presentation page, wiki, [Jekyll blog](https://jekyllrb.com/) and various integrations with other web services thanks to their API. Among these features, exists [Github pages](https://pages.github.com/) which is intended to allow you to publish **static** pages without the need to run our rent your own webserver. **So, as long as your datavisualization output does not require any running backend (be it in node.js, Python, R, Java, Ruby, etc), you can host it on Github pages !**. Unfortunately this means that [R Shiny apps](https://shiny.rstudio.com/) can not be hosted on Github pages. But yeah, you can still publish [leaflet](https://rstudio.github.io/leaflet/) maps, [plotly](https://plot.ly/r/) graphs and [knitr](https://yihui.name/knitr/demo/minimal/) html reports ! That already opens up a wide range of possibilities !  
+For those who are familiar with the version control software git you most probably already knows [Github](https://github.com/) as a git repository hosting service (if you don't know what [git](https://git-scm.com/) is, you really **must** get to [know it](http://r-bio.github.io/intro-git-rstudio/) to impressively speed up your (R) code development). Github offers many other possibilities : collaborative code developement, issues tracking and discussions, project presentation page, wiki, [Jekyll blog](https://jekyllrb.com/) and various integrations with other web services thanks to their API. Among these features, exists [Github pages](https://pages.github.com/) which is intended to allow you to publish **static** pages without the need to run our rent your own webserver. **So, as long as your datavisualization output does not require any running backend (be it in node.js, Python, R, Java, Ruby, etc), you can host it on Github pages !** Unfortunately this means that [R Shiny apps](https://shiny.rstudio.com/) can not be hosted on Github pages. But yeah, you can still publish [leaflet](https://rstudio.github.io/leaflet/) maps, [plotly](https://plot.ly/r/) graphs and [knitr](https://yihui.name/knitr/demo/minimal/) html reports ! That already opens up a wide range of possibilities !  
 
 What does Github pages actually does ?  
 
@@ -98,6 +98,8 @@ $ Rscript demo-map.R
 
 The script has produced a `demo-map.html` file containing the interactive map plus a `demo-map_files` folder containing all the required javascript libraries required to make it interactive. It has also saved 3 files resulting from the download of the raster elevation data. The resulting map looks like this : 
 
+<iframe src="https://pokyah.github.io/sheetsee-pocket/" width="90%" height="400"></iframe>
+
 If you get errors it might be because you don't have the required libraries installed. To avoid such problems, simply install the missing libraries (and if you are adventurous enough, you can have a look at my [R + Docker tutorial](it {{ site.baseurl }}{% post_url 2018-03-01-using-r-with-docker %})!)
 
 Your interactive web map is now built ! You can locally open it by right-clicking on the `demo-map.html` file and choose to open it with your favorite web-browser. Check the various buttons to be sure that everything works as expected. What is important to know is that this impressive web app does not need any backend to run. Once the page is loaded, everything works inside your web-browser thanks to HTML, CSS and Javascript ! 
@@ -108,7 +110,7 @@ That's probably what you will tell ! The trick is that leaflet render tiles stor
 
 ### Publish it online using gh-pages !
 
-Head back to your terminal (opened in your `myoutputs` folder) and save and publish your work to Github :
+Head back to your terminal (opened in your `myoutputs` folder) and save and publish your work to Github.
 
 ```bash
 $ git add .
