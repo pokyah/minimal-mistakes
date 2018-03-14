@@ -1,10 +1,10 @@
 ---
-title: "Using R with Docker"
-classes: "wide"
+title: Using R with Docker
+classes: wide
 comments: true
 toc: false
-toc_label: "Table des matières"
-toc_icon: "cog"
+toc_label: Table des matières
+toc_icon: cog
 categories:
   - howTo
 tags:
@@ -13,6 +13,7 @@ tags:
   - tools
   - english
   - standard
+published: true
 ---
 
 Why should you do that ? There are two main reasons to use R in conjunction with Docker. First, it allows you to quickly and easily share your work wathever the OS and R configuration of your collaborators. Hassle free collaboration ! Second, it allows you to work in an isolated environment. This means that you will never pollute your OS and e.g. run in time-consuming re-installation procedures due to broken configuration. In case of OS crash, simply relaunch your *Docker R container* with a single command (more about containers below) and you are ready to work ! 
@@ -45,7 +46,7 @@ This means that you will never run anymore in compatibility problems. It will al
 
 Docker also makes the use of the [Packrat](https://rstudio.github.io/packrat/) dependency management quite obsolete.
 
-## Docker installation 
+## Docker installation instructions
 
 You know why you should use Docker in the context of your R work and you want to install it now ! Well, to do it, simply follow the [installation instructions](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1) on the Docker official website or follow this nice [Digital Ocean tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04). 
 
