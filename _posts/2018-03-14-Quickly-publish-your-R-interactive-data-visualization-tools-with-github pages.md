@@ -104,13 +104,9 @@ $ Rscript demo-map.R
 
 The script has produced a `demo-map.html` file containing the interactive map plus a `demo-map_files` folder containing all the required javascript libraries required to make it interactive. It has also saved 3 files resulting from the download of the raster elevation data. The resulting map looks like this : 
 
-{% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=400px src="http://pokyah.github.io/assets/maps/BEL-DEM-KNMI/demo-map.html"></iframe>
-{% endraw %}
 
-
-
-If you get errors it might be because you don't have the required libraries installed. To avoid such problems, simply install the missing libraries (and if you are adventurous enough, you can have a look at my [R + Docker tutorial]{{ site.baseurl }}{% post_url _posts/2018-03-01-using-r-with-docker %}!)
+If you get errors it might be because you don't have the required libraries installed. To avoid such problems, simply install the missing libraries (and if you are adventurous enough, you can have a look at my [R + Docker tutorial]({{ site.baseurl }}{% post_url 2018-03-01-using-r-with-docker %})!)
 
 Your interactive web map is now built ! You can locally open it by right-clicking on the `demo-map.html` file and choose to open it with your favorite web-browser. Check the various buttons to be sure that everything works as expected. What is important to know is that this impressive web app does not need any backend to run. Once the page is loaded, everything works inside your web-browser thanks to HTML, CSS and Javascript ! 
 
