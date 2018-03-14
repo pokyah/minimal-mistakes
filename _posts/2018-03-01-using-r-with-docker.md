@@ -1,9 +1,5 @@
 ---
 title: "Using R with Docker"
-header:
-  overlay_image: /assets/images/r_docker.jpg
-  og_image: /assets/images/r_docker.jpg
-  caption: "Photo credit: [**pixabay**](https://pixabay.com)"
 classes: "wide"
 comments: true
 toc: false

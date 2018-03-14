@@ -1,9 +1,5 @@
 ---
 title: "Configurer un accès SSH à un hébergement mutualisé"
-header:
-  overlay_image: /assets/images/ssh_access.jpg
-  og_image: /assets/images/ssh_access.jpg
-  caption: "Photo credit: [**pixabay**](https://pixabay.com)"
 classes: "wide"
 toc: false
 toc_label: "Table des matières"
