@@ -47,7 +47,7 @@ Docker also makes the use of the [Packrat](https://rstudio.github.io/packrat/) d
 
 ## Docker installation 
 
-You know why you should use Docker in the context of your R work and you want to install it now ! Well, to do it, simply follow the [installation instructions](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1) on the Docker official website. 
+You know why you should use Docker in the context of your R work and you want to install it now ! Well, to do it, simply follow the [installation instructions](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1) on the Docker official website or follow this nice [Digital Ocean tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04). 
 
 Before we dive into the R part, you will need to understand some essential Docker concepts.
 
