@@ -136,7 +136,7 @@ You have two options to maintain this directory listing `index.html` file update
 
 ### bash script to build the directory listing index.html file
 
-Download and save [this]({{ "/assets/source_code/index-html.sh.R" | absolute_url }}) bash script under your `myoutputs` folder. Make it executable : 
+Download and save [this](https://pokyah.github.io/pokyah-maps/index.html.sh) bash script under your `myoutputs` folder. Make it executable : 
 
 ```bash
 $ chmod a+x index-html.sh
