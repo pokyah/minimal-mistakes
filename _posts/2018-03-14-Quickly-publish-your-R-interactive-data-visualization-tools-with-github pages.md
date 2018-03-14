@@ -1,8 +1,8 @@
 ---
-title: "Quickly publish your R interactive data visualisation tools with github pages (Leaflet example)"
+title: "Quickly publish your R interactive data visualization tools with github pages"
 header:
-  overlay_image: /assets/images/r_docker.jpg
-  og_image: /assets/images/r_docker.jpg
+  image: /assets/images/r-gh-pages.jpg
+  og_image: /assets/images/r-gh-pages.jpg
   caption: "Photo credit: [**pixabay**](https://pixabay.com)"
 classes: "wide"
 comments : true
