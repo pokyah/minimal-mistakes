@@ -105,7 +105,7 @@ $ Rscript demo-map.R
 The script has produced a `demo-map.html` file containing the interactive map plus a `demo-map_files` folder containing all the required javascript libraries required to make it interactive. It has also saved 3 files resulting from the download of the raster elevation data. The resulting map looks like this : 
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=400px src="http://music.163.com/outchain/player?type=2&id=29750802&auto=0&height=32"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=400px src="http://pokyah.github.io/assets/maps/BEL-DEM-KNMI/demo-map.html"></iframe>
 {% endraw %}
 
 
