@@ -26,7 +26,9 @@ This is your core business and I'm sure you do it pretty well ! But when it come
 
 R and web technologies can help you to solve these problems you probably have already encountered.  
 
-Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive data visualization apps and presentations. These last years, the R community has developed countless libraries (leaflet, shiny, plotly, knitr, etc) that take advantages from these advances in order to allow you to easily transform your analysis outputs in eye catching web apps that make your data intelligible.  
+Thanks to the advances in web technologies and the development of powerful Javascript librairies, our web-browsers are now able to render impressive data visualization apps and presentations. These last years, the R community has developed countless libraries (leaflet, shiny, plotly, knitr, etc) that take advantages from these advances.
+
+**You can now easily and quickly transform your analysis outputs in eye catching web apps that make your data intelligible !**  
 
 In this post we will see how to combine these R libraries capabilities with [Github pages](https://pages.github.com/) in order to quickly make your top notch data visualization output available to your audience (and don't be modest : to the world)
 
