@@ -145,7 +145,7 @@ You have two options to maintain this directory listing `index.html` file update
 
 ### bash script to build the directory listing index.html file
 
-Download and save [this](https://pokyah.github.io/pokyah-maps/index.html.sh) bash script under your `myoutputs` folder. Make it executable : 
+Download and save [this](https://pokyah.github.io/pokyah-maps/index-html.sh) bash script under your `myoutputs` folder. Make it executable : 
 
 ```bash
 $ chmod a+x index-html.sh
@@ -167,7 +167,7 @@ Each time, you run this bash script to update you index.html file, you of course
 ```bash
 $ git add .
 $ git commit -m "adding index.html and updating it with bash script"
-$ git 
+$ git push origin gh-pages
 ```
 
 ## Conclusion
