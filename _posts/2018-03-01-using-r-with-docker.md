@@ -127,7 +127,7 @@ Let's dive in the latest part of this tutorial : running R inside a container. I
 Let's say you need to make some R developments made easier with the [tidyverse](https://www.tidyverse.org/) family packages. To do this you will download the pre-built [rocker/tidyverse](https://hub.docker.com/r/rocker/tidyverse/image) from Docker hub using the command `pull` (note the similarity with [git](http://r-bio.github.io/intro-git-rstudio/)):
 
 ```bash
-$ pull docker pull rocker/tidyverse
+$ docker pull rocker/tidyverse
 ```
 Remember that we have learned that once closed, containers loose all the modifications you have made within it. So, __how to save your R developments made within a container__ ? The trick is to actually __mount your project folder from your host computer to the container__. This is achieved by passing optional parameters to the `run` command.
 
