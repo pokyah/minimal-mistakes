@@ -108,7 +108,7 @@ There a lot of ressources on the web that explain how to create your own images.
 In case you are sure you will not anymore run an image as container(s), you can delete it to save some space on your computer : 
 
 ```bash
-$ docker rmi >IMAGE_NAME:VERSION/IMAGE-ID>
+$ docker rmi <IMAGE_NAME:VERSION/IMAGE-ID>
 ```
 
 And to delete all images (really ?!) :
