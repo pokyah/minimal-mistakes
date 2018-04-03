@@ -21,7 +21,7 @@ tags:
 ---
 
 The AGROMET Project lead by the Walloon agricultural research center ([CRA-W](http://www.cra.wallonie.be/fr)) requires to generate spatialized weather dataset. In this context, multiple spatialization methods will be tested and evaluated among which the __multiple regression__ technique.
-This post provides an introductory material to the multiple regression modeling technique applied to spatial data. It is not a tutorial and is rather aimed at paving the way for beginners who want to take their first steps into in the field of applied geostatistics (with R) by defining key concepts and providing a lot of external resources worth reading !
+This post provides an introductory material to the multiple regression modeling technique applied to spatial data. It is not a tutorial and it is rather aimed at paving the way for beginners who want to take their first steps into in the field of applied geostatistics (with R) by defining key concepts and providing a lot of external resources worth reading !
 
 
 <details>
@@ -40,14 +40,14 @@ These “spatialized” data will be made available through a web-platform provi
 
 ## Spatialization definition
 
-Spatialization or spatial interpolation derives a __continuous surface__ from values measured at discrete locations to predict values at any location in the interest zone.
-The global objective is to produce the most accurate surface from existing sample data as well as characterizing the error and variability of the predicted data.
+Spatialization or spatial interpolation creates a __continuous surface__ from values measured at discrete locations to predict values at any location in the interest zone with the best accuracy.
+Characterizing the error and the variability of the predicted data are also parts of spatialization procedures.
 
- In the chapter *The principles of geostatistical analysis*  of the [Using ArcGis Geostatistical analyst](http://dusk2.geo.orst.edu/gis/geostat_analyst.pdf), K. Johnston gives an efficient overview of what spatialization is and what are the two big groups of techniques (deterministic and stochastic). The book also provides a glossary of recurrent geostatistical terms (another useful one is available on Pr. D.E. Meyers [personal page](http://www.u.arizona.edu/~donaldm/homepage/glossary.html)).
+In the chapter *The principles of geostatistical analysis*  of the [Using ArcGis Geostatistical analyst](http://dusk2.geo.orst.edu/gis/geostat_analyst.pdf), K. Johnston gives an efficient overview of what spatialization is and what are the two big groups of techniques (deterministic and stochastic). 
 
- The choice of the method depends on several factors which are all associated with certain __assumptions that have to be fulfilled__ in order to be applied. However, most spatial interpolation methods can mathematically be reduced to basically the same principles. Therefore, most of the applications follow the same principles in order to meet the assumptions and criteria required by the methods. These criteria are based on the __assumption on second order spatial [stationarity](https://www.youtube.com/watch?v=K3eUIDu4NWw) or, for the geostatistical approach, the intrinsic hypothesis__.
+We will not present all of them in the context of this post to keep the focus on the multiple regression technique.
 
- We will not present all of them in the context of this post to keep the focus on the multiple regression technique.
+(*The book also provides a glossary of recurrent geostatistical terms (another useful one is available on Pr. D.E. Meyers [personal page](http://www.u.arizona.edu/~donaldm/homepage/glossary.html)*).
 
 
 ## Multiple linear Regression : key concept

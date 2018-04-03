@@ -1,5 +1,7 @@
 ---
 title: "Configurer un accès SSH à un hébergement mutualisé"
+header:
+  og_image: /assets/images/ssh_access.jpg
 classes: "wide"
 toc: false
 toc_label: "Table des matières"
