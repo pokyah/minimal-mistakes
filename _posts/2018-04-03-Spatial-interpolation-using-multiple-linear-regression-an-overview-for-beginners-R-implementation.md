@@ -22,6 +22,19 @@ The AGROMET Project lead by the Walloon agricultural research center ([CRA-W](ht
 This post provides an introductory material to the multiple regression modeling technique applied to spatial data. It is not a tutorial and is rather aimed at paving the way for beginners who want to take their first steps into in the field of applied geostatistics (with R) by defining key concepts and providing a lot of external resources worth reading !
 
 <details>
+  <summary>Full details about the AGROMET project</summary>
+  <p>
+<!-- the above p cannot start right at the beginning of the line and is mandatory for everything else to work -->
+### Context
+The European directive 2009/128/CE imposes member-states to set up tools that allow for a more rational use of crop protection products. Among these tools, agricultural warning systems, based on crop monitoring models for the control of pests and diseases are widely adopted and have proved their efficiency. However, due to the difficulty to get meteorological data at high spatial resolution (at the parcel scale), they still are underused. The use of geostatistical tools (Kriging, Multiple Regressions, Artificial Neural Networks, etc.) makes it possible to interpolate data provided by physical weather stations in such a way that a high spatial resolution network (mesh size of 1 km2) of virtual weather stations could be generated. That is the objective of the AGROMET project.
+
+### Objectives
+The project aims to set up an operational web-platform designed for real-time agro-meteorological data dissemination at high spatial (1km2) and temporal (hourly) resolution. To achieve the availability of data at such a high spatial resolution, we plan to “spatialize” the real-time data sent by more than 30 connected physical weather stations belonging to the PAMESEB and RMI networks. This spatialization will then result in a gridded dataset corresponding to a network of 16 000 virtual stations uniformly spread on the whole territory of Wallonia.
+These “spatialized” data will be made available through a web-platform providing interactive visualization widgets (maps, charts, tables and various indicators) and an API allowing their use on the fly, notably by agricultural warning systems providers. An extensive and precise documentation about data origin, geo-statistic algorithms used and uncertainty will also be available.
+
+</p></details>
+
+<details>
   <summary>*Full details about the AGROMET project*</summary>
   <p>
 ### Context
