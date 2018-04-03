@@ -1,7 +1,6 @@
 ---
 title: "Spatial interpolation using multiple linear regression : an overview for beginners (R implementation)"
 header:
-  image: /assets/images/spatial_multiple_regression.jpg
   og_image: /assets/images/spatial_multiple_regression.jpg
 comments: true
 toc: false
