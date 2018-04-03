@@ -1,8 +1,7 @@
 ---
 title: "Spatial interpolation using multiple linear regression : an overview for beginners (R implementation)"
-classes: "wide"
 comments: true
-toc: false
+toc: true
 toc_label: "Table des matières"
 toc_icon: "cog"
 categories:
