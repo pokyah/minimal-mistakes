@@ -22,6 +22,33 @@ The AGROMET Project lead by the Walloon agricultural research center ([CRA-W](ht
 This post provides an introductory material to the multiple regression modeling technique applied to spatial data. It is not a tutorial and is rather aimed at paving the way for beginners who want to take their first steps into in the field of applied geostatistics (with R) by defining key concepts and providing a lot of external resources worth reading !
 
 <details>
+  <summary>stuff with *mark* **down**</summary>
+  <p>
+<!-- the above p cannot start right at the beginning of the line and is mandatory for everything else to work -->
+##*formatted* **heading** with [a](link)
+```java
+code block
+```
+
+  <details>
+    <summary><small>nested</small> stuff</summary><p>
+<!-- alternative placement of p shown above -->
+
+* list
+* with
+
+ 1. nested
+ 1. items
+
+    ```java
+    // including code
+    ```
+ 1. blocks
+
+  </p></details>
+</p></details>
+
+<details>
   <summary>Full details about the AGROMET project</summary>
   <p>
 <!-- the above p cannot start right at the beginning of the line and is mandatory for everything else to work -->
