@@ -43,7 +43,7 @@ These “spatialized” data will be made available through a web-platform provi
 Spatialization or spatial interpolation creates a __continuous surface__ from values measured at discrete locations to predict values at any location in the interest zone with the best accuracy.
 Characterizing the error and the variability of the predicted data are also parts of spatialization procedures.
 
-In the chapter *The principles of geostatistical analysis*  of the [Using ArcGis Geostatistical analyst](http://dusk2.geo.orst.edu/gis/geostat_analyst.pdf), K. Johnston gives an efficient overview of what spatialization is and what are the two big groups of techniques (deterministic and stochastic). 
+In the chapter *The principles of geostatistical analysis*  of the [Using ArcGis Geostatistical analyst](http://dusk2.geo.orst.edu/gis/geostat_analyst.pdf), K. Johnston gives an efficient overview of what spatialization is and what are the two big groups of techniques (deterministic and stochastic).
 
 We will not present all of them in the context of this post to keep the focus on the multiple regression technique.
 
@@ -93,7 +93,7 @@ Now that you have tested the validity of your model (i.e. your model is statisti
 From Robin Lovelace's *Geocomputation with R* [book](https://geocompr.robinlovelace.net/spatial-cv.html) :
 > CV determines a model’s ability to predict new data or differently put its ability to generalize. To achieve this, CV splits a dataset (repeatedly) into __test__ and __training__ sets. It uses the training data to fit the model, and checks if the trained model is able to predict the correct results for the test data. Basically, cross-validation helps to detect over-fitting since a model that fits too closely the training data and its specific peculiarities (noise, random fluctuations) will have a bad prediction performance on the test data. However, the basic requirement for this is, that the test data is independent of the training data. CV achieves this by splitting the data randomly into test and training sets. However, randomly splitting spatial data results in the fact that training points are frequently located next to test points. Since points close to each other are more similar compared to points further away, test and training datasets might not be independent. The consequence is that cross-validation would fail to detect over-fitting in the presence of spatial autocorrelation
 
-(*To understand the [importance of the autocorrelation concept](https://stats.stackexchange.com/questions/36145/linear-regression-and-spatial-autocorrelation), you could read the [Spatial regression models paragraph](http://rspatial.org/analysis/rst/7-spregression.html) of the *Spatial Data Analysis and Modeling with R* website*).
+(*To understand the [importance of the autocorrelation concept](https://stats.stackexchange.com/questions/36145/linear-regression-and-spatial-autocorrelation), you could read the [Spatial regression models paragraph](http://rspatial.org/analysis/rst/7-spregression.html) of the Spatial Data Analysis and Modeling with R website and watch this short [video](https://www.youtube.com/watch?v=M9ecMxVG6jQ)*).
 
 To assess how well a model performs at making its predictions actually good predictions, 2 CV methods are often presented :  
 * (spatial) k-fold cross validation
