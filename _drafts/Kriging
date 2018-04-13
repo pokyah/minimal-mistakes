@@ -14,3 +14,24 @@ https://www.researchgate.net/profile/Julia_Schiffner2/publication/309321851_mlr_
 https://github.com/mlr-org/mlr/wiki/user-2015-tutorial
 
 https://www.analyticsvidhya.com/blog/2016/08/practicing-machine-learning-techniques-in-r-with-mlr-package/
+
+
+
+## Strategy
+
+what explains temperature ? 
+
+- position ==> same
+- elevation ==> same
+- solar radiation ==> dynamic
+- aspect ==> same
+
+1. Choose sample from whole dataset (randomly but incoporating all the seasons) : set.seed random subset (how many) hourly observation on the 20 years TMY period basis for all stations
+2. This sample will be refered as dataset here below
+2. Check if dataset presents spatial homogeneity or not : compute local means for all stations. A visible trend ? Will need to be detrended. ==> https://stats.stackexchange.com/questions/57357/tests-for-spatial-stationarity-homogeneity. Make histogram separated for example below and above a certain elevation (elevation could be an excellent explanation to spatial Temperature heterogeneity) =>  where ? Look at the distribution of stations elevation. To restore the hypothesis of spatial homogeneity, we would like the histograms to be independant of location. Is there a clear trend that can be fitted between temperature and elevation for our whole ? dataset ==> presumably yes. trend usually refers to a change in the mean over space. To detrend subtract the deviations from the least squares fit line (i.e. the differences) from your data.https://econometricswithr.wordpress.com/tag/detrend/ and http://www.statisticshowto.com/detrend-data/
+
+To show to power of the found trend, we can only keep the temperature of a single year and see if the same trend (slope) is seen ! 
+
+
+
+## Data Collection

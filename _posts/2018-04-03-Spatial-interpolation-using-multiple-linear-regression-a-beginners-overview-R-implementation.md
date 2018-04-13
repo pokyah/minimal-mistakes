@@ -84,7 +84,7 @@ Once the linear model is fitted, the mathematical formula to predict the respons
 * Standard error of the regression
 * p-value
 
-To get a deep insight of these model diagnostic indicators, check these 2 excellent R-oriented posts about evaluating regression model outputs by [Felipe Rego](https://feliperego.github.io/blog/2015/10/23/Interpreting-Model-Output-In-R) and [Selva Prabhakaran](http://r-statistics.co/Linear-Regression.html). You can also have a quick look at this [page](https://www.otexts.org/fpp/4/4).
+To get a deep insight of these model diagnostic indicators, check these 2 excellent R-oriented posts about evaluating regression model outputs by [Felipe Rego](https://feliperego.github.io/blog/2015/10/23/Interpreting-Model-Output-In-R) and [Selva Prabhakaran](http://r-statistics.co/Linear-Regression.html). You can also have a quick look at this [page](https://www.otexts.org/fpp/4/4). You may also have a look at the Minitab's blog posts ([1](http://blog.minitab.com/blog/adventures-in-statistics-2/multiple-regession-analysis-use-adjusted-r-squared-and-predicted-r-squared-to-include-the-correct-number-of-variables), [2](http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit) concerning the interpretation of the R² values
 
 ### Using the model and measuring its success (i.e. validation process)
 
