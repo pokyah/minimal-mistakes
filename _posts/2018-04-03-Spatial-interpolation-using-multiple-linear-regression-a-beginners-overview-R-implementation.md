@@ -101,7 +101,7 @@ To assess how well a model performs at making its predictions actually good pred
 
 How to know which one best fits your needs [(k-fold or leave-one-out)](https://stats.stackexchange.com/questions/154830/10-fold-cross-validation-vs-leave-one-out-cross-validation) ? The short answer is to use the leave-one-out method when you have a small amount of samples.
 
-To check if the trained model is able to predict the correct results for the test data, [calculating the accuracy measures and error rates](http://r-statistics.co/Linear-Regression.html) allows to find out the prediction accuracy of the model.
+To check if the trained model is able to predict the correct results for the test data, [calculating the accuracy measures and error rates](http://r-statistics.co/Linear-Regression.html) allows to find out the prediction accuracy of the model. [Paper](https://www.geos.ed.ac.uk/~gisteac/gis_book_abridged/files/ch14.pdf) about spatial predictions errors
 
 In your analysis, you might try many variants of the same kind of modeling technique, for example, by adding or removing extra independent variables. In this case, you will need to establish a diagnostic of the measure of success of each of the variants investigated. There is no universal technique to compare these. You can grab some ideas to implement in your own work from the [Aertsen et al. 2010 paper](https://www.sciencedirect.com/science/article/pii/S0304380010000463) where they describe a multi-criteria decision analysis for model evaluation.
 
