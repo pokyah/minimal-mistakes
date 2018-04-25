@@ -106,6 +106,13 @@ To check if the trained model is able to predict the correct results for the tes
 In your analysis, you might try many variants of the same kind of modeling technique, for example, by adding or removing extra independent variables. In this case, you will need to establish a diagnostic of the measure of success of each of the variants investigated. There is no universal technique to compare these. You can grab some ideas to implement in your own work from the [Aertsen et al. 2010 paper](https://www.sciencedirect.com/science/article/pii/S0304380010000463) where they describe a multi-criteria decision analysis for model evaluation.
 
 
+### Assessing the uncertainty on the predicted values
+
+Recommanded readings :  
+* paragraph 3.3 of the "Spatial interpolation of air pollution measurements using CORINE land cover data" [paper](http://www.irceline.be/~celinair/rio/rio_corine.pdf)  
+* full text of the "Spatial uncertainty analysis: propagation of interpolation errors in spatially distributed models" [paper](https://www.sciencedirect.com/science/article/pii/0304380095001913)
+* the Pennstate University stat 501 [course](https://onlinecourses.science.psu.edu/stat501/node/254)
+
 ## R guidelines
 
 Now that you have a better insight of what spatialization and multiple linear regressions are, it's time to get the job done and dive in some coding work with R !
