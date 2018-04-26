@@ -6,6 +6,7 @@ comments: true
 toc: false
 toc_label: "Table des matières"
 toc_icon: "cog"
+classes: "wide"
 categories:
   - howTo
   - synthesis
@@ -51,31 +52,8 @@ How to extract the uncertainties of predictions using R ?
 Let's find an example on the web. [Tomislav Hengl](https://scholar.google.com/citations?user=2oYU7S8AAAAJ&hl=en), an expert in the field of geostatistics has published a nice tutorial about how to [vizualize spatial uncertainty](http://spatial-analyst.net/wiki/index.php/Uncertainty_visualization#Visualization_of_uncertainty_using_whitening_in_R). In his tutorial, he uses the `se` output of the `krige` function as the uncertainty indicator. ([`krige` doc](https://www.rdocumentation.org/packages/gstat/versions/1.1-6/topics/krige), is a simple wrapper method around `gstat` and `predict`). The code here below comes from his tutorial
 
 ``` r
-library(colorspace)
 library(rgdal)
-```
-
-    ## Loading required package: sp
-
-    ## rgdal: version: 1.2-18, (SVN revision 718)
-    ##  Geospatial Data Abstraction Library extensions to R successfully loaded
-    ##  Loaded GDAL runtime: GDAL 2.1.2, released 2016/10/24
-    ##  Path to GDAL shared files: /usr/share/gdal/2.1
-    ##  GDAL binary built with GEOS: TRUE 
-    ##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]
-    ##  Path to PROJ.4 shared files: (autodetected)
-    ##  Linking to sp version: 1.2-7
-
-``` r
 library(maptools)
-```
-
-    ## Checking rgeos availability: FALSE
-    ##      Note: when rgeos is not available, polygon geometry     computations in maptools depend on gpclib,
-    ##      which has a restricted licence. It is disabled by default;
-    ##      to enable gpclib, type gpclibPermit()
-
-``` r
 library(gstat)
 
 # using the Meuse dataset
@@ -88,11 +66,6 @@ fullgrid(meuse.grid) <- TRUE
 # universal kriging:
 k.m <- fit.variogram(variogram(log(zinc)~sqrt(dist), meuse), vgm(1, "Sph", 300, 1))
 vismaps <- krige(log(zinc)~sqrt(dist), meuse, meuse.grid, model=k.m)
-```
-
-    ## [using universal kriging]
-
-``` r
 names(vismaps) <- c("z","e")
 
 # Plot the predictions and the standard error :
@@ -132,7 +105,6 @@ plot(x,y)
 mod <- lm(y~x)
 
 summary(mod)
-```
 
     ## 
     ## Call:
@@ -153,27 +125,22 @@ summary(mod)
     ## Multiple R-squared:  0.477,  Adjusted R-squared:  0.4717 
     ## F-statistic:  89.4 on 1 and 98 DF,  p-value: 1.845e-15
 
-``` r
 confint(mod)
-```
 
     ##                 2.5 %     97.5 %
     ## (Intercept)  8.268164 11.4056821
     ## x           -1.457428 -0.9517715
 
-``` r
+
 summary(mod)$sigma
-```
 
     ## [1] 3.659392
 
-``` r
+
 summary(mod)$r.square
-```
 
     ## [1] 0.4770454
 
-``` r
 # creating the points on which we want to predict values using the model equation
 X <- cbind(1,seq(0,10,0.01))
 beta <- coef(mod)
@@ -200,16 +167,14 @@ lines(y.hat - auto.y.hat.se ~ X[,2],col="green",lty=2)
 ``` r
 # same values ? 
 print(head(auto.y.hat.se))
-```
 
     ##         1         2         3         4         5         6 
     ## 0.7905189 0.7893898 0.7882612 0.7871330 0.7860052 0.7848779
 
-``` r
 print(head(auto.y.hat.se))
-```
 
     ##         1         2         3         4         5         6 
     ## 0.7905189 0.7893898 0.7882612 0.7871330 0.7860052 0.7848779
 
+```
 Ok we have succeeded to manually compute the Standard errors of the predictions !
