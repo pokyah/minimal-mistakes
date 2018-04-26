@@ -105,43 +105,6 @@ plot(x,y)
 # modelizing
 mod <- lm(y~x)
 
-summary(mod)
-
-    ## 
-    ## Call:
-    ## lm(formula = y ~ x)
-    ## 
-    ## Residuals:
-    ##     Min      1Q  Median      3Q     Max 
-    ## -9.8368 -2.1982 -0.1033  2.5965  8.3619 
-    ## 
-    ## Coefficients:
-    ##             Estimate Std. Error t value Pr(>|t|)    
-    ## (Intercept)   9.8369     0.7905  12.444  < 2e-16 ***
-    ## x            -1.2046     0.1274  -9.455 1.85e-15 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## Residual standard error: 3.659 on 98 degrees of freedom
-    ## Multiple R-squared:  0.477,  Adjusted R-squared:  0.4717 
-    ## F-statistic:  89.4 on 1 and 98 DF,  p-value: 1.845e-15
-
-confint(mod)
-
-    ##                 2.5 %     97.5 %
-    ## (Intercept)  8.268164 11.4056821
-    ## x           -1.457428 -0.9517715
-
-
-summary(mod)$sigma
-
-    ## [1] 3.659392
-
-
-summary(mod)$r.square
-
-    ## [1] 0.4770454
-
 # creating the points on which we want to predict values using the model equation
 X <- cbind(1,seq(0,10,0.01))
 beta <- coef(mod)
