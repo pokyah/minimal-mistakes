@@ -35,3 +35,138 @@ To show to power of the found trend, we can only keep the temperature of a singl
 
 
 ## Data Collection
+
+Kriging is a geostatistical method of interpolation which optimizes the weighting of the available supporting data points to minimize the error variance of the estimate (Isaaks and Srivastava,1989).
+
+
+Kriging consists of three steps. 
+
+First, all possible pairs of data points are examined, the pairs are grouped by distance classes, and the semivariance (half the variance of the difference in values) is
+graphed vs. the distance class. This is the 'sample semivariogram' and shows the degree of spatial autocorrelation as a function of distance between points.
+
+Second, a curve ('model semivariogram') is fit to these points by eye, by least-squares regression, or preferably by optimizing an initial model by crossvalidation procedures. 
+
+Lastly, this model is used to determine the weights for the nearby supporting data points to compute the estimate for the desired unmeasured point. 
+
+
+
+
+In R, what se.fit values produced by predict(se.fit=TRUE) exactly are and how are these computed if I pass a new.data parameter ? 
+
+I need to produce gridded maps of temperature with an uncertainty attached to each cell of the grid. When using regression, model parameters are computed from a sample to estimate the parameters of the whole population (we generalize what is learnt on a sample on the whole population). So the question arises whether we can use this generalization with enough confidence (can we extrapolate these parameters to the whole population) ?
+To answer this question, 2 tools are available :  
+* the __standard error__
+* the __confidence interval__
+
+According to this [paper](https://www.sciencedirect.com/science/article/pii/0304380095001913), the uncertainty relates to the __standard error__ of the predictions.
+
+* The standard error (SE) of a statistic (usually an estimate of a parameter) is the __standard deviation__ of its sampling distribution. 
+
+* The __standard deviation__ is the positive square root of the __variance__. The standard deviation is expressed in the same units as the mean is, whereas the variance is expressed in squared units. 
+
+* The __variance__ is the average squared dispersion around the mean. Variance is a measurement of the spread between numbers in a data set. The variance measures how far each number in the set is from the mean. Variance is calculated by taking the differences between each number in the set and the mean, squaring the differences (to make them positive) and dividing the sum of the squares by the number of values in the set.
+
+According to the tutorial [vizualize spatial uncertainty](http://spatial-analyst.net/wiki/index.php/Uncertainty_visualization#Visualization_of_uncertainty_using_whitening_in_R) from spatial analyst (Tomislav Hengl), the uncertainty relates to the `se` output of the krige function. 
+
+Looking at the [doc of krige](https://www.rdocumentation.org/packages/gstat/versions/1.1-6/topics/krige), one could learn that :
+
+> Function krige is a simple wrapper method around `gstat` and `predict` for univariate kriging prediction and conditional simulation methods available in gstat. For multivariate prediction or simulation, or for other interpolation methods provided by gstat (such as inverse distance weighted interpolation or trend surface interpolation) use the functions gstat and predict directly.
+
+So, let's see what `predict` [documentation](https://www.rdocumentation.org/packages/gstat/versions/1.0-2/topics/predict) tells us : 
+
+
+
+
+
+
+
+
+
+
+Après loo cross-validation, on dispose de la possibilité de réaliser ceci puisque pour chaque station, on a valeur observée et valeur estimée : 
+
+> We then computed the interpolation errors as the difference between the kriged estimate and the actual observed value. The distribution of these errors can be used to depict the observed uncertainty of the interpolated values on a regionwide basis.
+
+
+
+
+ 
+The __standard error__ is the __standard deviation__ of any estimated parameter.
+
+The standard error (SE) of a statistic (usually an estimate of a parameter) is the standard deviation of its sampling distribution[1] or an estimate of the standard deviation[2]. If the parameter or the statistic is the mean, it is called the standard error of the mean (SEM)
+
+* The __standard deviation__ is the positive square root of the variance. The standard deviation is expressed in the same units as the mean is, whereas the variance is expressed in squared units. The variance is
+the average squared dispersion around the mean. Variance is a measurement of the spread between numbers in a data set. The variance measures how far each number in the set is from the mean. Variance is calculated by taking the differences between each number in the set and the mean, squaring the differences (to make them positive) and dividing the sum of the squares by the number of values in the set.
+
+##### Standard Deviation :
+The standard deviation is the positive square root of the variance. The standard deviation is expressed in the same units as the mean is, whereas the variance is expressed in squared units, but for looking at a distribution, you can use either just so long as you are clear about what you are using. For example, a Normal distribution with mean = 10 and sd = 3 is exactly the same thing as a Normal distribution with mean = 10 and variance = 9.
+Recommanded readings :  
+* paragraph 3.3 of the "Spatial interpolation of air pollution measurements using CORINE land cover data" [paper](http://www.irceline.be/~celinair/rio/rio_corine.pdf)  
+* the Pennstate University stat 501 [course](https://onlinecourses.science.psu.edu/stat501/node/254)  
+* full text of the "Spatial uncertainty analysis: propagation of interpolation errors in spatially distributed models" [paper](https://www.sciencedirect.com/science/article/pii/0304380095001913)  
+
+> The interpolation errors are not likely to be spatially homogeneous, but will depend on the number and proximity of supporting data points used for each grid point interpolation. Ideally,
+one would like to produce not only a map for the model output variables, but the corresponding output uncertainty map as well.
+
+
+
+
+
+
+Dans l'article "Spatial uncertainty analysis: propagation of interpolation errors in spatially distributed models" [paper](https://www.sciencedirect.com/science/article/pii/0304380095001913) :  
+
+> Kriging was used as the method for interpolating the temperature, humidity, and wind input data to the 10-km grid because it provides not only an estimate for each grid point, but an estimation variance as well. These estimation variances depend on the number and proximity of supporting data points and the degree of spatial interdependence as quantified by a semivariogram (described below), and provide a measure of interpolation uncertainty (Robertson, 1987). 
+
+Après loo cross-validation, on dispose de la possibilité de réaliser ceci puisque pour chaque station, on a valeur observée et valeur estimée : 
+
+> We then computed the interpolation errors as the difference between the kriged estimate and the actual observed value. The distribution of these errors can be used to depict the observed uncertainty of the interpolated values on a regionwide basis.
+
+Dans l'article [vizualize spatial uncertainty](http://spatial-analyst.net/wiki/index.php/Uncertainty_visualization#Visualization_of_uncertainty_using_whitening_in_R) de spatial analyst (Tomislav Hengl : recommandé par KNMI), ce qu'il qualifie d'incertitude correspond dans son code à la colonne qu'il nomme "e" dans l'output de la fonction krige. Dans son commentaire, il utilise plot prediction/variance.
+
+```r
+# Geul case study:
+
+data(meuse)
+coordinates(meuse) <- ~x+y
+data(meuse.grid)
+gridded(meuse.grid) <- ~x+y
+fullgrid(meuse.grid) <- TRUE
+
+# universal kriging:
+m <- fit.variogram(variogram(log(zinc)~sqrt(dist), meuse), vgm(1, "Sph", 300, 1))
+vismaps <- krige(log(zinc)~sqrt(dist), meuse, meuse.grid, model=m)
+names(vismaps) <- c("z","e")
+
+# Plot the predictions/variance:
+
+z.plot <- spplot(vismaps["z"], col.regions=bpy.colors(), scales=list(draw=TRUE), sp.layout=list("sp.points", pch="+", col="black", meuse))
+e.plot <- spplot(vismaps["e"], col.regions=bpy.colors(), scales=list(draw=TRUE))
+
+print(z.plot, split=c(1,1,2,1), more=TRUE)
+print(e.plot, split=c(2,1,2,1), more=FALSE)
+```
+
+https://stat.ethz.ch/R-manual/R-devel/library/stats/html/predict.lm.html
+https://www.image.ucar.edu/GSP/Software/Fields/Help/predict.se.html
+https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd512.htm
+
+
+Pareil dans le papier CORINE :
+
+> When solving the Ordinary Kriging equations, a value for the error variance can be obtained at the same time (Isaaks et al. 1989). This error variance is a measure for the uncertainty of the interpolation result 
+
+ ==> uncertainty : prediction error. prediction error computed by function krige which is a wrapper for predict ==> see predict.se to understand what se is.
+
+https://stackoverflow.com/questions/33660682/how-to-compute-standard-error-for-predicted-data-in-r-using-predict
+
+http://www.dummies.com/programming/r/how-to-predict-new-data-values-with-r/
+
+## Et l'intervalle de confiance dans tout ça ? 
+https://www.mathsisfun.com/data/confidence-interval.html
+https://www.thoughtco.com/what-is-a-confidence-interval-3126415
+
+## et la RMSE ? 
+
+http://www.statisticshowto.com/mean-squared-error/
+
+

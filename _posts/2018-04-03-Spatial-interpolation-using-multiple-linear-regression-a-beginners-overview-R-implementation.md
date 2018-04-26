@@ -108,10 +108,8 @@ In your analysis, you might try many variants of the same kind of modeling techn
 
 ### Assessing the uncertainty on the predicted values
 
-Recommanded readings :  
-* paragraph 3.3 of the "Spatial interpolation of air pollution measurements using CORINE land cover data" [paper](http://www.irceline.be/~celinair/rio/rio_corine.pdf)  
-* full text of the "Spatial uncertainty analysis: propagation of interpolation errors in spatially distributed models" [paper](https://www.sciencedirect.com/science/article/pii/0304380095001913)
-* the Pennstate University stat 501 [course](https://onlinecourses.science.psu.edu/stat501/node/254)
+
+
 
 ## R guidelines
 
