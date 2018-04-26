@@ -28,7 +28,8 @@ Theory regarding the uncertainty
 Model parameters are computed from a sample (the data from our AWS network in our case) to estimate the parameters of the whole population (our grid). Models actually generalize what is learnt on a sample on the whole population. So the question arises whether we can use this generalization with enough confidence (can we extrapolate these parameters to the whole population) ?
 
 To answer this question, 2 tools are commonly used :
-\* the **standard error** \* the **confidence interval**
+* the **standard error**  
+* the **confidence interval**
 
 The standard error is what quantifies the uncertainty while the 95% confidence intervals represent quantiles between which are found 95 % of the samples means after removing the 2.5 % of both the bigger and smaller values. A good explanation of its meaning can be found [here](https://www.mathsisfun.com/data/confidence-interval.html) and [here](https://www.thoughtco.com/what-is-a-confidence-interval-3126415)
 
@@ -76,7 +77,7 @@ print(z.plot, split=c(1,1,2,1), more=TRUE)
 print(e.plot, split=c(2,1,2,1), more=FALSE)
 ```
 
-![]({{ "/assets/images/figure-markdown_github/unnamed-chunk-1-1.png" | absolute_url }})
+![]({{ "/assets/images/unnamed-chunk-1-1.png" | absolute_url }})
 
 Nice we have what we need ! Easy ! But how are SE computed for the predictions ? We could have a look at the source code of the krige function. But let's build it manually with a simple example for the sake of comprehesion. Doing so, requires some matrix algebra (variance + covariance matrix). A detailed explanation of the next code block is available in [this course](http://www.cra.wallonie.be/wp/wp-content/uploads/2016/12/Formation_Stats_3_1_GLM.pdf)
 
@@ -98,7 +99,7 @@ y <- alpha - beta*x + rnorm(n,0,sigma)
 plot(x,y)
 ```
 
-![]({{ "/assets/images/figure-markdown_github/unnamed-chunk-2-1.png" | absolute_url }})
+![]({{ "/assets/images/unnamed-chunk-2-1.png" | absolute_url }})
 
 ``` r
 # modelizing
@@ -162,7 +163,7 @@ lines(y.hat + auto.y.hat.se ~ X[,2],col="green",lty=2)
 lines(y.hat - auto.y.hat.se ~ X[,2],col="green",lty=2)
 ```
 
-![]({{ "/assets/images/figure-markdown_github/unnamed-chunk-2-2.png" | absolute_url }})
+![]({{ "/assets/images/unnamed-chunk-2-2.png" | absolute_url }})
 
 ``` r
 # same values ? 
