@@ -35,7 +35,7 @@ Via l’interface d’administration de votre hébergeur, créez un compte d’a
 Sur votre ordinateur, ouvrez le terminal (shell) et lancez la commande  de création d’une clef SSH :
 
 ```bash
-myUserName:~$ ssh -keygen -t dsa
+myUserName:~$ ssh-keygen -t dsa
 ```
 
 Le shell vous demandera dans quel répertoire vous souhaitez enregistrer votre clef. Appuyez simplement sur enter.
